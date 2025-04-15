@@ -1,0 +1,25 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h3>Excluir Registro</h2>
+    <form action="" method="post">
+      <p>
+        Desejas excluir o registro: {{object}}?
+      </p>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-danger">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>

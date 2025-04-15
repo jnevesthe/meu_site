@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Bonita</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bem-vindo à Página Bonita!</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Cadastro</a></li> <!-- Link de Cadastro adicionado aqui -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="intro">
+                <h2>O que fazemos?</h2>
+                <p>Somos uma empresa focada em oferecer soluções criativas e inovadoras para nossos clientes. Confira nossos serviços!</p>
+                <button id="cta-button">Saiba Mais</button>
+            </section>
+            <section class="cards">
+                <div class="card">
+                    <h3>Design Gráfico</h3>
+                    <p>Oferecemos designs modernos e atrativos para sua marca.</p>
+                </div>
+                <div class="card">
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criamos sites e sistemas personalizados para seu negócio.</p>
+                </div>
+                <div class="card">
+                    <h3>Marketing Digital</h3>
+                    <p>Estratégias para expandir sua presença online e alcançar mais clientes.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Página Bonita | Todos os direitos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
